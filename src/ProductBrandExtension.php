@@ -27,7 +27,9 @@ class ProductBrandExtension extends Extension
                 'BrandID',
                 _t(self::class . '.Brand', 'Brand'),
                 Brand::get()->map('ID', 'Title')->toArray()
-            )->setEmptyString(_t(self::class . '.NoBrand', '(none)'))
+            )->setEmptyString(_t(self::class . '.NoBrand', '(none)')),
+            // Place it next to the product's identity fields rather than dangling after Metadata.
+            'Model'
         );
     }
 }
