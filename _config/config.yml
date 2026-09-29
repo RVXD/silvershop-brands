@@ -1,0 +1,6 @@
+---
+Name: silvershop-brands
+---
+SilverShop\Page\Product:
+  extensions:
+    - SilverShop\Brands\ProductBrandExtension
