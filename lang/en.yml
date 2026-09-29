@@ -1,0 +1,23 @@
+en:
+  SilverShop\Brands\Brand:
+    SINGULARNAME: 'Brand'
+    PLURALNAME: 'Brands'
+    db_Title: 'Name'
+    db_Description: 'Description'
+    Logo: 'Logo'
+    Products: 'Products'
+    col_Title: 'Brand'
+    col_Products: 'Products'
+  SilverShop\Brands\BrandAdmin:
+    MENUTITLE: 'Brands'
+  SilverShop\Brands\ProductBrandExtension:
+    Brand: 'Brand'
+    NoBrand: '(none)'
+  SilverShop\Brands\SalesByBrandReport:
+    TITLE: 'Sales by brand'
+    DESC: 'Revenue and units sold per brand for a period. Placed orders, product lines only.'
+    ColBrand: 'Brand'
+    ColUnits: 'Units sold'
+    ColRevenue: 'Revenue'
+    Start: 'From (paid date)'
+    End: 'To (paid date)'

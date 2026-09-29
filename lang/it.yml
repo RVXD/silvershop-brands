@@ -1,0 +1,23 @@
+it:
+  SilverShop\Brands\Brand:
+    SINGULARNAME: 'Marca'
+    PLURALNAME: 'Marche'
+    db_Title: 'Nome'
+    db_Description: 'Descrizione'
+    Logo: 'Logo'
+    Products: 'Prodotti'
+    col_Title: 'Marca'
+    col_Products: 'Prodotti'
+  SilverShop\Brands\BrandAdmin:
+    MENUTITLE: 'Marche'
+  SilverShop\Brands\ProductBrandExtension:
+    Brand: 'Marca'
+    NoBrand: '(nessuna)'
+  SilverShop\Brands\SalesByBrandReport:
+    TITLE: 'Vendite per marca'
+    DESC: 'Ricavi e unità vendute per marca in un periodo. Solo ordini effettuati, righe prodotto.'
+    ColBrand: 'Marca'
+    ColUnits: 'Unità vendute'
+    ColRevenue: 'Ricavi'
+    Start: 'Da (data di pagamento)'
+    End: 'A (data di pagamento)'

@@ -1,0 +1,23 @@
+nl:
+  SilverShop\Brands\Brand:
+    SINGULARNAME: 'Merk'
+    PLURALNAME: 'Merken'
+    db_Title: 'Naam'
+    db_Description: 'Omschrijving'
+    Logo: 'Logo'
+    Products: 'Producten'
+    col_Title: 'Merk'
+    col_Products: 'Producten'
+  SilverShop\Brands\BrandAdmin:
+    MENUTITLE: 'Merken'
+  SilverShop\Brands\ProductBrandExtension:
+    Brand: 'Merk'
+    NoBrand: '(geen)'
+  SilverShop\Brands\SalesByBrandReport:
+    TITLE: 'Verkoop per merk'
+    DESC: 'Omzet en verkochte aantallen per merk voor een periode. Alleen geplaatste bestellingen, productregels.'
+    ColBrand: 'Merk'
+    ColUnits: 'Verkochte aantallen'
+    ColRevenue: 'Omzet'
+    Start: 'Vanaf (betaaldatum)'
+    End: 'Tot (betaaldatum)'

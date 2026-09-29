@@ -1,0 +1,23 @@
+de:
+  SilverShop\Brands\Brand:
+    SINGULARNAME: 'Marke'
+    PLURALNAME: 'Marken'
+    db_Title: 'Name'
+    db_Description: 'Beschreibung'
+    Logo: 'Logo'
+    Products: 'Produkte'
+    col_Title: 'Marke'
+    col_Products: 'Produkte'
+  SilverShop\Brands\BrandAdmin:
+    MENUTITLE: 'Marken'
+  SilverShop\Brands\ProductBrandExtension:
+    Brand: 'Marke'
+    NoBrand: '(keine)'
+  SilverShop\Brands\SalesByBrandReport:
+    TITLE: 'Verkäufe nach Marke'
+    DESC: 'Umsatz und verkaufte Stückzahl pro Marke für einen Zeitraum. Nur aufgegebene Bestellungen, Produktzeilen.'
+    ColBrand: 'Marke'
+    ColUnits: 'Verkaufte Stück'
+    ColRevenue: 'Umsatz'
+    Start: 'Von (Zahldatum)'
+    End: 'Bis (Zahldatum)'
