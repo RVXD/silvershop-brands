@@ -1,4 +1,6 @@
 nl:
+  SilverShop\Brands\Search\BrandFacet:
+    TITLE: 'Merk'
   SilverShop\Brands\Brand:
     SINGULARNAME: 'Merk'
     PLURALNAME: 'Merken'

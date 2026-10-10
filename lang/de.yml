@@ -1,4 +1,6 @@
 de:
+  SilverShop\Brands\Search\BrandFacet:
+    TITLE: 'Marke'
   SilverShop\Brands\Brand:
     SINGULARNAME: 'Marke'
     PLURALNAME: 'Marken'
