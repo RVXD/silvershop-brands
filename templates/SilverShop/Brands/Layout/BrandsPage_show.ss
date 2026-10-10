@@ -13,6 +13,25 @@
         <% end_if %>
     <% end_with %>
 
+    <% if $Facets && $Facets.Count %>
+        <aside class="brand__facets silvershop-search__facets">
+            <% loop $Facets %>
+                <% if $Options.Count %>
+                    <div class="facet facet--$Name">
+                        <h2 class="facet__title">$Title</h2>
+                        <ul class="facet__options">
+                            <% loop $Options %>
+                                <li class="facet__option<% if $Active %> is-active<% end_if %>">
+                                    <a href="$Link" rel="nofollow">$Label <span class="facet__count">($Count)</span></a>
+                                </li>
+                            <% end_loop %>
+                        </ul>
+                    </div>
+                <% end_if %>
+            <% end_loop %>
+        </aside>
+    <% end_if %>
+
     <% if $Products.Count %>
         <ul class="products brand__products">
             <% loop $Products %>

@@ -47,8 +47,11 @@ class BrandsPageTest extends SapphireTest
         $this->assertSame(['Star'], $page->FeaturedBrands()->column('Title'));
     }
 
-    public function testBrandFilterNarrowsByRequestVar(): void
+    public function testBrandFilterDefersToSearchWhenInstalled(): void
     {
+        // silvershop/search is a dev dependency here, so its category facet navigation owns the brand facet and
+        // this standalone single-brand filter defers — avoiding double-filtering and multi-select mishandling.
+        // (The standalone filter still narrows on shops that have brands but not search.)
         $brand = Brand::create(['Title' => 'Acme']);
         $brand->write();
         $match = Product::create(['Title' => 'Branded', 'BrandID' => $brand->ID]);
@@ -66,8 +69,9 @@ class BrandsPageTest extends SapphireTest
             $list = Product::get();
             (new ProductCategoryBrandFilterExtension())->updateProductsShowable($list);
             $ids = array_map('intval', $list->column('ID'));
+            // Deferred: the list is left untouched (search's facet nav does the filtering on real category pages).
             $this->assertContains((int) $match->ID, $ids);
-            $this->assertNotContains((int) $other->ID, $ids);
+            $this->assertContains((int) $other->ID, $ids);
         } finally {
             $controller->popCurrent();
         }

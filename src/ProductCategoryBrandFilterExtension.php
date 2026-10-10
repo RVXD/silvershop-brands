@@ -18,6 +18,12 @@ class ProductCategoryBrandFilterExtension extends Extension
 {
     public function updateProductsShowable(&$products): void
     {
+        // When silvershop/search is installed, its category facet navigation owns the brand facet (including
+        // multi-select ?brand=a,b), so defer to it rather than double-filter or mishandle comma-separated values.
+        if (class_exists(\SilverShop\Search\Facet\FacetApplier::class)) {
+            return;
+        }
+
         $controller = Controller::curr();
         if (!$products || !$controller || !$controller->getRequest()) {
             return;
