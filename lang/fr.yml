@@ -19,6 +19,11 @@ fr:
     col_Products: 'Produits'
   SilverShop\Brands\BrandAdmin:
     MENUTITLE: 'Marques'
+  SilverShop\Brands\BrandsPage:
+    SINGULARNAME: 'Page des marques'
+    PLURALNAME: 'Pages des marques'
+    VisitWebsite: 'Visiter le site web'
+    NoProducts: 'Aucun produit pour cette marque pour l''instant.'
   SilverShop\Brands\ProductBrandExtension:
     Brand: 'Marque'
     NoBrand: '(aucune)'

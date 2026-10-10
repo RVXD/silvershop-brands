@@ -10,11 +10,15 @@ WooCommerce all ship a first-class brand entity.
   (meta title/description), **website**, **logo** + **banner**, **featured** flag, sort order.
 - A **`Brand` picker on each product** (has_one `Brand`); a brand lists its products (`$brand->Products()`).
 - A **Sales by brand** report under CMS → Reports (revenue + units per brand, placed orders, date filter).
-- `Brand::Link()` — the brand's storefront URL (dormant until the storefront phase adds a `BrandsPage`).
+- A **`BrandsPage`** (optional, add it in the CMS): an **all-brands index** and a **per-brand page** at
+  `/<brands-page>/<brand-url-segment>` listing that brand's products (paginated). `Brand::Link()` resolves to it.
+- A **PDP brand display** include — `<% include SilverShop/Brands/ProductBrand %>` (logo + name linking to the brand);
+  drop it into your theme's `Product.ss`.
+- A **brand filter** on category listings — `?brand=<id|url-segment>` narrows a `ProductCategory` to one brand.
 
-Brands are a lightweight DataObject (no page-tree clutter). The storefront data model is in place; the brand
-**landing pages**, PDP brand display and brand filter are the next phase (see the consuming project's
-`PLAN-brands-storefront.md`).
+Brands are a lightweight DataObject (no page-tree clutter); the storefront is driven by the optional `BrandsPage`.
+All templates (`SilverShop/Brands/Layout/BrandsPage.ss`, `BrandsPage_show.ss`, `Includes/ProductBrand.ss`) are
+theme-overridable. Full multi-facet refine (brand + price + attributes) is the job of the planned `silvershop/facets`.
 
 ## Upgrading
 
@@ -35,10 +39,10 @@ $acme = Product::get()->filter('BrandID', $brand->ID);
 
 ## Status
 
-Backend + storefront **data model** complete: Brand model with URL segment / content / SEO / website / banner /
-featured, product link, CMS admin, sales-by-brand report, i18n (en/nl/de/fr/es/it), tests + CI. **Storefront pages
-are next** — the brand landing page (`BrandsPage`), PDP brand display and a brand filter (the
-`silvershop/category-index` → `facets` pattern applies) complete parity with PrestaShop / WooCommerce brand pages.
+v1.2 — **storefront complete**: Brand model (URL segment / content / SEO / website / banner / featured), product
+link, CMS admin, sales-by-brand report, **BrandsPage landing + per-brand product listing**, **PDP brand display**,
+a **brand filter** on category listings, i18n (en/nl/de/fr/es/it), tests + CI. Reaches PrestaShop / WooCommerce
+brand-page parity. Beyond scope (planned `silvershop/facets`): multi-facet refine (brand + price + attributes).
 
 ## Requirements
 

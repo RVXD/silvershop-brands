@@ -4,3 +4,7 @@ Name: silvershop-brands
 SilverShop\Page\Product:
   extensions:
     - SilverShop\Brands\ProductBrandExtension
+
+SilverShop\Page\ProductCategory:
+  extensions:
+    - SilverShop\Brands\ProductCategoryBrandFilterExtension

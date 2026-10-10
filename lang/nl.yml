@@ -19,6 +19,11 @@ nl:
     col_Products: 'Producten'
   SilverShop\Brands\BrandAdmin:
     MENUTITLE: 'Merken'
+  SilverShop\Brands\BrandsPage:
+    SINGULARNAME: 'Merkenpagina'
+    PLURALNAME: 'Merkenpagina''s'
+    VisitWebsite: 'Website bezoeken'
+    NoProducts: 'Nog geen producten voor dit merk.'
   SilverShop\Brands\ProductBrandExtension:
     Brand: 'Merk'
     NoBrand: '(geen)'
