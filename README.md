@@ -23,8 +23,10 @@ $acme = Product::get()->filter('BrandID', $brand->ID);
 
 ## Status
 
-Prototype. Next: brand landing pages + storefront brand filter (the EffectiveCategories index pattern applies), a
-`Brand.URLSegment`, i18n.
+v1.0 — **backend**: the Brand model, product link, CMS admin, sales-by-brand report, i18n (en/nl/de/fr/es/it), tests
++ CI. **No storefront yet** — brand landing pages, a `Brand.URLSegment`, a PDP brand display and a storefront brand
+filter/facet (the `silvershop/category-index` → `facets` index pattern applies) are the planned follow-up for parity
+with PrestaShop / WooCommerce brand pages.
 
 ## Requirements
 
